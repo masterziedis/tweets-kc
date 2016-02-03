@@ -98,7 +98,7 @@ tweets$type = factor(tweets$type,levels(tweets$type)[c(3,1,2)])
 ggplot(data = tweets, aes(x = timestamp, fill = type)) +
   geom_histogram() +
   xlab("Time") + ylab("Number of tweets") +
-  scale_fill_manual(values = c("yellow", "orange", "red"))
+  scale_fill_manual(values = c("#e5ffff", "darkgrey", "black"))
 
 ## Characters in tweet
 tweets$charsintweet <- sapply(tweets$text, function(x) nchar(x))
